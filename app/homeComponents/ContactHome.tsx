@@ -29,31 +29,34 @@ const ContactHome = () => {
     <div ref={container} className="w-full h-screen overflow-hidden relative">
       <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
         <div className="flex items-center w-full justify-between">
-          <Link href="https://www.facebook.com/share/19zGeq2UDB/">
+          <Link
+            href="https://www.facebook.com/share/19zGeq2UDB/"
+            target="_blank"
+          >
             <FacebookLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#">
+          <Link href="#" target="_blank">
             <InstagramLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#">
+          <Link href="#" target="_blank">
             <LinkedinLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#">
+          <Link href="#" target="_blank">
             <GithubLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="">
+          <Link href="" target="_blank">
             <ThreadsLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
@@ -93,7 +96,7 @@ const ContactHome = () => {
           Submit
         </Button>
         <div className="w-full h-auto flex flex-col gap-6">
-          <div className="flex items-center gap 2">
+          <div className="flex items-center gap-2">
             <MapPinIcon />
             <p className="text-xs">
               Ea Ktur Commune, Cu Kuin District, Dak Lak Province, Vietnam
