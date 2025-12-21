@@ -29,7 +29,7 @@ const ContactHome = () => {
     <div ref={container} className="w-full h-screen overflow-hidden relative">
       <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
         <div className="flex items-center w-full justify-between">
-          <Link href="#">
+          <Link href="https://www.facebook.com/share/19zGeq2UDB/">
             <FacebookLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
