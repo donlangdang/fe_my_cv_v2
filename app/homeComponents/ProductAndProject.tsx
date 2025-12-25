@@ -32,7 +32,7 @@ const ProductAndProject = () => {
           <span className="text-purple-400 lg:text-sm">●</span> Products
           <span className="text-purple-400">.</span>
         </p>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
           <ProductAndProjectLink />
           <ProductAndProjectLink />
           <ProductAndProjectLink />

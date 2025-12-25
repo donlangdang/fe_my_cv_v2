@@ -15,7 +15,7 @@ export default async function Home() {
   // });
 
   return (
-    <main className="w-full h-25000">
+    <main className="w-full h-auto">
       <HomeBannerImage />
       <MyStory />
       <SecondBanner
