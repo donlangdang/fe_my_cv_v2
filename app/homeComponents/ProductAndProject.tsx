@@ -3,6 +3,7 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 import ProductAndProjectLink from "./productAndProjectLink/ProductAndProjectLink";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductAndProject = () => {
   const container = useRef(null);
@@ -50,7 +51,14 @@ const ProductAndProject = () => {
         </div>
       </motion.div>
       {/* làm xem thêm theo dòng thời gian ở đây  */}
-      <div className="w-full text-center">See More in time line</div>
+      <div className="text-center mt-4 lg:mt-10">
+        <Link
+          href="#"
+          className="cursor-pointer text-sm select-none hover:bg-zinc-500 px-4 py-2 rounded-sm bg-zinc-700"
+        >
+          See More in time line
+        </Link>
+      </div>
       <p className="px-6 py-6 md:px-16 text-xl font-semibold tracking-wide lg:text-2xl">
         <span className="text-purple-400 lg:text-sm">●</span> Projects
         <span className="text-purple-400">.</span>

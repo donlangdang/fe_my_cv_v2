@@ -20,8 +20,19 @@ const Footer = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], ["-100%", "0%"]);
   return (
-    <div ref={container} className="w-full h-96 overflow-hidden relative">
-      <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
+    <div
+      ref={container}
+      className="w-full lg:-96 h-80 overflow-hidden relative"
+    >
+      <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-10 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
+        <div className="text-center flex flex-col gap-4">
+          <h2 className="font-bold text-xl lg:text-2xl tracking-widest">
+            <span className="text-purple-400">E</span>mail Me
+            <span className="text-purple-400">.</span>
+          </h2>
+          <p className="tracking-widest font-medium">congdondev@gmail.com</p>
+        </div>
+        <p className="font-semibold text-lg tracking-widest">Follow Along</p>
         <div className="flex items-center w-full justify-between">
           <Link
             href="https://www.facebook.com/share/19zGeq2UDB/"
@@ -57,15 +68,12 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <h2 className="font-bold text-2xl lg:text-4xl tracking-widest">
-          <span className="text-purple-400">E</span>mail
-          <span className="text-purple-400">.</span>
-        </h2>
+        <p className="font-normal text-xs">© 2026 Don Dinh</p>
       </div>
       <motion.img
         style={{ y }}
         className="w-full h-full lg:aspect-video object-cover object-center"
-        src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1765121663/PXL_20251202_002612211.RAW-02.ORIGINAL_zij5dq.jpg"
+        src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170598/.trashed-1766503912-PXL_20251105_075313394.RAW-02.ORIGINAL_pyt5cw.jpg"
       />
     </div>
   );
