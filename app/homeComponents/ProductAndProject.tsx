@@ -4,6 +4,7 @@ import { useRef } from "react";
 import ProductAndProjectLink from "./productAndProjectLink/ProductAndProjectLink";
 import Image from "next/image";
 import Link from "next/link";
+import ImageGalleryHome from "./ImageGalleryHome";
 
 const ProductAndProject = () => {
   const container = useRef(null);
@@ -49,11 +50,12 @@ const ProductAndProject = () => {
           <ProductAndProjectLink />
           <ProductAndProjectLink />
         </div>
+        <ImageGalleryHome />
       </motion.div>
       {/* làm xem thêm theo dòng thời gian ở đây  */}
       <div className="text-center mt-4 lg:mt-10">
         <Link
-          href="#"
+          href="/product-list"
           className="cursor-pointer text-sm select-none hover:bg-zinc-500 px-4 py-2 rounded-sm bg-zinc-700"
         >
           See More in time line
