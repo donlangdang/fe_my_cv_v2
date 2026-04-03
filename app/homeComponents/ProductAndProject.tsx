@@ -13,15 +13,9 @@ const ProductAndProject = () => {
     offset: ["start end", "start start"],
   });
 
-  // const positionY = useTransform(scrollYProgress, [0, 0.1], ["100%", "0%"]);
   const positionScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
     <div ref={container} className="relative w-full h-auto overflow-hidden">
-      {/* <motion.img */}
-      {/*   style={{ y: positionY, scale: positionScale }} */}
-      {/*   className='w-full h-full object-cover object-center' */}
-      {/*   src='bannerHome.jpg' */}
-      {/* /> */}
       <motion.div style={{ scale: positionScale }}>
         <div className="flex items-center justify-center gap-3 flex-col font-bold text-2xl lg:text-4xl tracking-widest w-full h-auto py-30 text-center">
           <div className="w-full">
