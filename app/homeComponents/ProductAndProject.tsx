@@ -28,7 +28,7 @@ const ProductAndProject = () => {
           <span className="text-purple-400 lg:text-sm">●</span> Products
           <span className="text-purple-400">.</span>
         </p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 p-4">
+        <div className="w-full h-auto grid grid-cols-2 lg:grid-cols-4 gap-4 px-6 md:px-48">
           <ProductAndProjectLink />
           <ProductAndProjectLink />
           <ProductAndProjectLink />
@@ -60,7 +60,7 @@ const ProductAndProject = () => {
         <span className="text-purple-400">.</span>
       </p>
       <motion.div
-        className="w-full h-auto px-12 md:px-20 font-medium tracking-wide lg:text-xl flex items-start justify-center flex-col gap-6"
+        className="w-full h-auto px-12 md:px-48 font-medium tracking-wide lg:text-xl flex items-start justify-center flex-col gap-6"
         initial={{ x: "-100%", opacity: 0 }}
         // animate={{ opacity: 1, x: 0 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -82,7 +82,7 @@ const ProductAndProject = () => {
           <span className="text-purple-400">.</span>
         </div>
         <div className="w-1/2 lg:w-1/5 h-0.5 bg-purple-400 " />
-        <div className="px-4 lg:px-32 w-full">
+        <div className="px-4 lg:px-48 w-full">
           <div className="relative w-full h-auto aspect-640/495">
             <Image
               sizes=""
