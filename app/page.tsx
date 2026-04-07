@@ -1,4 +1,3 @@
-import ProgressBar from "@/components/progressBar/ProgressBar";
 import HomeBannerImage from "./homeComponents/HomeBannerImage";
 import MyStory from "./homeComponents/MyStory";
 import SecondBanner from "./homeComponents/SecondBanner";
@@ -32,7 +31,6 @@ export default async function Home() {
       />
       <ProductAndProject />
       <ContactHome />
-      <ProgressBar />
     </main>
   );
 }
