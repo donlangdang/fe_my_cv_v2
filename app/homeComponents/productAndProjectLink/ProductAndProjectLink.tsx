@@ -27,13 +27,13 @@ const ProductAndProjectLink = () => {
               src="/bannerHome2.1.jpg"
             />
           </DialogTrigger>
-          <DialogContent className="sm:max-w-106.25 w-full h-full max-h-[calc(100%-2rem)]">
+          <DialogContent className="sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
             <DialogTitle></DialogTitle>
             <Image
-              alt="product and project Link"
+              alt="product and project image"
               fill
               loading="lazy"
-              className="object-center object-cover"
+              className="object-center object-contain"
               src="/bannerHome2.1.jpg"
             />
           </DialogContent>
