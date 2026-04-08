@@ -1,12 +1,15 @@
 "use client";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
-import ProductAndProjectLink from "./productAndProjectLink/ProductAndProjectLink";
 import Image from "next/image";
 import Link from "next/link";
+import { useTransitionRouter } from "next-view-transitions";
+import pageAnimation from "@/lib/pageAnimation";
+import ProductAndProjectLink from "./productAndProjectLink/ProductAndProjectLink";
 import ImageGalleryHome from "./ImageGalleryHome";
 
 const ProductAndProject = () => {
+  const router = useTransitionRouter();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -51,6 +54,12 @@ const ProductAndProject = () => {
         <Link
           href="/product-list"
           className="cursor-pointer text-sm select-none hover:bg-zinc-500 px-4 py-2 rounded-sm bg-zinc-700"
+          onClick={(e) => {
+            e.preventDefault();
+            router.push("/product-list", {
+              onTransitionReady: pageAnimation,
+            });
+          }}
         >
           See More in time line
         </Link>

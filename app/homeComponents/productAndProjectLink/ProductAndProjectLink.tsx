@@ -12,6 +12,8 @@ import {
 const ProductAndProjectLink = () => {
   return (
     <motion.div
+      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.03 }}
       initial={{ opacity: 0, scale: 0.7 }}
       whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
       className="relative w-full h-auto aspect-3/4 overflow-hidden rounded-2xl"
@@ -23,7 +25,7 @@ const ProductAndProjectLink = () => {
               alt="product and project Link"
               fill
               loading="lazy"
-              className="object-center object-cover hover:scale-110 transition-all duration-500"
+              className="object-center object-cover"
               src="/bannerHome2.1.jpg"
             />
           </DialogTrigger>

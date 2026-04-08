@@ -7,7 +7,7 @@ interface SecondBannerType {
   title: string;
 }
 
-const TheJourney = ({ imageBanner2, title }: SecondBannerType) => {
+const CallToAction = ({ imageBanner2, title }: SecondBannerType) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -37,4 +37,6 @@ const TheJourney = ({ imageBanner2, title }: SecondBannerType) => {
   );
 };
 
-export default TheJourney;
+export default CallToAction;
+
+//TODO: if you want to order custom product please contact me or email me with congdondev@gmail.com

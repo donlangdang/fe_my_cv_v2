@@ -6,13 +6,6 @@ import ProductAndProject from "./homeComponents/ProductAndProject";
 import ContactHome from "./homeComponents/ContactHome";
 
 export default async function Home() {
-  // test loading.tsx
-  // await new Promise((resolve) => {
-  //   setTimeout(() => {
-  //     resolve("wait 3s");
-  //   }, 3000);
-  // });
-
   return (
     <main className="w-full h-auto">
       <HomeBannerImage />
