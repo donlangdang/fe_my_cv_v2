@@ -8,7 +8,7 @@ const YearGalery = () => {
   ];
 
   return (
-    <div className="w-full h-auto grid grid-cols-2 md:grid-cols-4 md:px-32 gap-4 py-4 text-zinc-800">
+    <div className="w-full h-auto grid grid-cols-2 md:grid-cols-4 md:px-32 gap-4 py-10 text-zinc-800">
       {a.map((b) => (
         <motion.div
           key={b}

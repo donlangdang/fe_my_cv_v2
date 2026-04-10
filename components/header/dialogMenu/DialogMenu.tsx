@@ -17,8 +17,8 @@ export default function DialogMenu() {
         <DialogTrigger asChild>
           <Menu />
         </DialogTrigger>
-        <DialogContent className="sm:max-w-106.25 w-full h-full max-h-[calc(100%-2rem)]">
-          <DialogHeader>
+        <DialogContent className="sm:max-w-106.25 w-full h-auto max-h-[calc(100%-2rem)]">
+          <DialogHeader className="pb-10">
             <DialogTitle>Menu</DialogTitle>
           </DialogHeader>
           {/* nếu muốn bấm vào gì để dialog đóng lại thì phải bọc DialogClose aschild bên ngoài cáo đó  */}
