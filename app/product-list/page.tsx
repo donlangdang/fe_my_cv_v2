@@ -1,6 +1,10 @@
+import { getSortedImages } from "@/lib/cloundiaryAPI";
 import YearGalery from "./yearGalery/YearGalery";
 
-const page = () => {
+const page = async () => {
+  const images = await getSortedImages();
+  console.log(images);
+
   return (
     <div className="h-auto w-full pt-24 px-6 md:px-16 md:pt-24">
       <h1 className="w-full h-auto text-center font-semibold tracking-wide lg:text-2xl">
