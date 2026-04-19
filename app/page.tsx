@@ -4,8 +4,12 @@ import SecondBanner from "./homeComponents/SecondBanner";
 import Homeapi from "@/api/homeapi";
 import ProductAndProject from "./homeComponents/ProductAndProject";
 import ContactHome from "./homeComponents/ContactHome";
+import { getHomeImagesList } from "@/lib/cloundiaryAPI";
+import { CloudinarySearchResponse } from "@/type/cloundiarySearchRespoonse";
 
 export default async function Home() {
+  const images: CloudinarySearchResponse = await getHomeImagesList();
+
   return (
     <main className="w-full h-auto">
       <HomeBannerImage />
@@ -22,7 +26,7 @@ export default async function Home() {
         imageBanner2={Homeapi[4].src}
         title="Bespoke Leather Goods"
       />
-      <ProductAndProject />
+      <ProductAndProject images={images} />
       <ContactHome />
     </main>
   );

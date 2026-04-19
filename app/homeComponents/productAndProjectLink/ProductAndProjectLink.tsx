@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 import { motion } from "framer-motion";
 import {
   Dialog,
@@ -8,8 +8,9 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { CloudinaryResource } from "@/type/cloundiarySearchRespoonse";
 
-const ProductAndProjectLink = () => {
+const ProductAndProjectLink = ({ image }: { image: CloudinaryResource }) => {
   return (
     <motion.div
       whileTap={{ scale: 0.95 }}
@@ -18,29 +19,28 @@ const ProductAndProjectLink = () => {
       whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
       className="relative w-full h-auto aspect-3/4 overflow-hidden rounded-2xl"
     >
-      <Link href="#" className=" w-full h-full overflow-hidden">
-        <Dialog>
-          <DialogTrigger asChild>
-            <Image
-              alt="product and project Link"
-              fill
-              loading="lazy"
-              className="object-center object-cover"
-              src="/bannerHome2.1.jpg"
-            />
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
-            <DialogTitle></DialogTitle>
-            <Image
-              alt="product and project image"
-              fill
-              loading="lazy"
-              className="object-center object-contain"
-              src="/bannerHome2.1.jpg"
-            />
-          </DialogContent>
-        </Dialog>
-      </Link>
+      <Dialog>
+        <DialogTrigger asChild className="w-full h-full">
+          <CldImage
+            alt={image.public_id}
+            width={600}
+            height={800}
+            loading="lazy"
+            className="object-center object-cover"
+            src={image.public_id}
+          />
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
+          <DialogTitle></DialogTitle>
+          <Image
+            alt={image.public_id}
+            fill
+            loading="lazy"
+            className="object-center object-contain"
+            src={image.secure_url}
+          />
+        </DialogContent>
+      </Dialog>
     </motion.div>
   );
 };

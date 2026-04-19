@@ -7,8 +7,13 @@ import { useTransitionRouter } from "next-view-transitions";
 import pageAnimation from "@/lib/pageAnimation";
 import ProductAndProjectLink from "./productAndProjectLink/ProductAndProjectLink";
 import ImageGalleryHome from "./ImageGalleryHome";
+import { CloudinarySearchResponse } from "@/type/cloundiarySearchRespoonse";
 
-const ProductAndProject = () => {
+const ProductAndProject = ({
+  images,
+}: {
+  images: CloudinarySearchResponse;
+}) => {
   const router = useTransitionRouter();
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -32,20 +37,9 @@ const ProductAndProject = () => {
           <span className="text-purple-400">.</span>
         </p>
         <div className="w-full h-auto grid grid-cols-2 lg:grid-cols-4 gap-4 px-6 md:px-48">
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
-          <ProductAndProjectLink />
+          {images.resources.map((image) => (
+            <ProductAndProjectLink image={image} key={image.public_id} />
+          ))}
         </div>
         <ImageGalleryHome />
       </motion.div>
@@ -61,7 +55,7 @@ const ProductAndProject = () => {
             });
           }}
         >
-          See More in time line
+          See More
         </Link>
       </div>
       <p className="px-6 py-6 md:px-16 text-xl font-semibold tracking-wide lg:text-2xl">

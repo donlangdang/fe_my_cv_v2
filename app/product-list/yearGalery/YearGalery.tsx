@@ -1,54 +1,50 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 import {
   Dialog,
   DialogContent,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { CloudinarySearchResponse } from "@/type/cloundiarySearchRespoonse";
 
-const YearGalery = () => {
-  const a = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
-  ];
-
+const YearGalery = ({ images }: { images: CloudinarySearchResponse }) => {
   return (
     <div className="w-full h-auto grid grid-cols-2 md:grid-cols-4 md:px-32 gap-4 py-10 text-zinc-800">
-      {a.map((b) => (
+      {images.resources.map((image) => (
         <motion.div
-          key={b}
+          key={image.public_id}
           whileTap={{ scale: 0.95 }}
           whileHover={{ scale: 1.03 }}
           initial={{ opacity: 0, scale: 0.7 }}
           whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
-          className="relative w-full h-auto aspect-3/4 rounded-2xl bg-muted"
+          className="relative w-full h-auto aspect-3/4 rounded-2xl bg-muted overflow-hidden"
         >
-          <Link href="#" className=" w-full h-full overflow-hidden">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Image
-                  alt="product and project Link"
-                  fill
-                  loading="lazy"
-                  className="object-center object-cover"
-                  src="/bannerHome2.1.jpg"
-                />
-              </DialogTrigger>
-              <DialogContent className="flex items-center justify-center sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
-                <DialogTitle className="hidden"></DialogTitle>
-                <Image
-                  alt="product and project image"
-                  fill
-                  loading="lazy"
-                  className="object-center object-contain"
-                  src="/bannerHome2.1.jpg"
-                />
-              </DialogContent>
-            </Dialog>
-          </Link>
+          <Dialog>
+            <DialogTrigger asChild className="w-full h-full">
+              <CldImage
+                alt={image.public_id}
+                width={600}
+                height={800}
+                sizes="25vw"
+                loading="lazy"
+                className="object-center object-cover"
+                src={image.public_id}
+              />
+            </DialogTrigger>
+            <DialogContent className="flex items-center justify-center sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
+              <DialogTitle className="hidden"></DialogTitle>
+              <Image
+                alt={image.public_id}
+                fill
+                loading="lazy"
+                className="object-center object-contain"
+                src={image.secure_url}
+              />
+            </DialogContent>
+          </Dialog>
         </motion.div>
       ))}
     </div>

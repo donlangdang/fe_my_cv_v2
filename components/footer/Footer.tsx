@@ -68,7 +68,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <p className="font-normal text-xs">© 2026 Don Dinh</p>
+        <p className="font-normal text-xs">© 2026 Don Dinh v1.2.1</p>
       </div>
       <motion.img
         style={{ y }}

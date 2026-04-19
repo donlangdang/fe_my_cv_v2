@@ -1,9 +1,9 @@
 import { getSortedImages } from "@/lib/cloundiaryAPI";
 import YearGalery from "./yearGalery/YearGalery";
+import { CloudinarySearchResponse } from "@/type/cloundiarySearchRespoonse";
 
 const page = async () => {
-  const images = await getSortedImages();
-  console.log(images);
+  const images: CloudinarySearchResponse = await getSortedImages();
 
   return (
     <div className="h-auto w-full pt-24 px-6 md:px-16 md:pt-24">
@@ -12,7 +12,7 @@ const page = async () => {
         eatured Products
         <span className="text-purple-400">.</span>
       </h1>
-      <YearGalery />
+      <YearGalery images={images} />
     </div>
   );
 };
