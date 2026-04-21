@@ -21,11 +21,10 @@ const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
 export const metadata: Metadata = {
   title: {
     template: "%s | Don Dinh Leathercraft",
-    default:
-      "Don Dinh | Premium Handmade Leather Goods & Bespoke Craftsmanship",
+    default: "Don Dinh | Handmade Leather Goods & Bespoke Craftsmanship",
   },
   description:
-    "Exquisite handcrafted leather goods by Don Dinh. Specializing in bespoke wallets, bags, and accessories using traditional hand-stitching techniques and premium leathers.",
+    "Handcrafted leather goods by Don Dinh. Specializing in bespoke wallets, bags, and accessories using traditional hand-stitching techniques and premium leathers.",
   keywords: [
     "Handmade leather goods",
     "Bespoke leather artisan",
@@ -37,11 +36,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: {
       template: "%s | Don Dinh Leathercraft",
-      default:
-        "Don Dinh | Premium Handmade Leather Goods & Bespoke Craftsmanship",
+      default: "Don Dinh | Handmade Leather Goods & Bespoke Craftsmanship",
     },
     description:
-      "Exquisite handcrafted leather goods by Don Dinh. Specializing in bespoke wallets, bags, and accessories using traditional hand-stitching techniques and premium leathers.",
+      "Handcrafted leather goods by Don Dinh. Specializing in bespoke wallets, bags, and accessories using traditional hand-stitching techniques and premium leathers.",
     url: `${baseUrl}`,
     siteName: "Don Dinh Leathercraft",
     images: [
