@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: "Don Dinh Leathercraft",
     images: [
       {
-        url: "/SEO_Banner.png",
+        url: "/SEO_Banner.jpg",
         width: 1200,
         height: 630,
         alt: "Don Dinh Leather Artisan",
