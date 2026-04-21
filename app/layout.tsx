@@ -52,10 +52,10 @@ export const metadata: Metadata = {
         alt: "Don Dinh Leather Artisan",
       },
     ],
-    locale: "vi_VN",
-    phoneNumbers: "098789456",
+    locale: "en_US",
+    phoneNumbers: "0846414579",
     type: "website",
-    emails: "tiemhoavungtau@gmail.com",
+    emails: "congdondev@gmail.com",
     countryName: "Việt Nam",
   },
   alternates: {
