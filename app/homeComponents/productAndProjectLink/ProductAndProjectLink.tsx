@@ -23,8 +23,8 @@ const ProductAndProjectLink = ({ image }: { image: CloudinaryResource }) => {
         <DialogTrigger asChild className="w-full h-full">
           <CldImage
             alt={image.public_id}
-            width={600}
-            height={800}
+            width={500}
+            height={666}
             loading="lazy"
             className="object-center object-cover"
             src={image.public_id}

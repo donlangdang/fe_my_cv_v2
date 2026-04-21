@@ -26,8 +26,8 @@ const YearGalery = ({ images }: { images: CloudinarySearchResponse }) => {
             <DialogTrigger asChild className="w-full h-full">
               <CldImage
                 alt={image.public_id}
-                width={600}
-                height={800}
+                width={500}
+                height={666}
                 sizes="25vw"
                 loading="lazy"
                 className="object-center object-cover"
