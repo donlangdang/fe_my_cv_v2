@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ViewTransitions } from "next-view-transitions";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import ProgressBar from "@/components/progressBar/ProgressBar";
@@ -73,19 +72,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ViewTransitions>
-      <html lang="en" className="dark">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          <SmoothScrolling>
-            <Header />
-            {children}
-            <Footer />
-            <ProgressBar />
-          </SmoothScrolling>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" className="dark">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <SmoothScrolling>
+          <Header />
+          {children}
+          <Footer />
+          <ProgressBar />
+        </SmoothScrolling>
+      </body>
+    </html>
   );
 }

@@ -30,7 +30,7 @@ const ProductAndProjectLink = ({ image }: { image: CloudinaryResource }) => {
             src={image.public_id}
           />
         </DialogTrigger>
-        <DialogContent className="sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
+        <DialogContent className="sm:max-w-8xl w-full h-full max-h-[calc(100%-10rem)]">
           <DialogTitle></DialogTitle>
           <Image
             alt={image.public_id}

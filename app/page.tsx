@@ -20,14 +20,16 @@ export default async function Home() {
       />
       <SecondBanner
         imageBanner2={Homeapi[3].src}
-        title="Made entirely by hand and hand-sewn"
+        title="Made Entirely By Hand And Hand-sewn"
       />
       <SecondBanner
-        imageBanner2={Homeapi[4].src}
-        title="Bespoke Leather Goods"
+        imageBanner2="https://res.cloudinary.com/dhadoo9ui/image/upload/v1776442156/PXL_20251125_062001550.RAW-02.ORIGINAL_jy2pcy.jpg"
+        title="Finest Quality And Durability"
       />
       <ProductAndProject images={images} />
       <ContactHome />
     </main>
   );
 }
+
+//TODO: ở đây neen thay ảnh BannerHome và ảnh MyStory bằng cloundiary nhé
