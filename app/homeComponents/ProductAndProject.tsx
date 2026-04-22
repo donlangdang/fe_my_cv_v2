@@ -60,13 +60,14 @@ const ProductAndProject = ({
         whileInView={{ opacity: 1, x: 0 }}
       >
         <p>
-          <span className="text-purple-400 lg:text-xs">●</span> making wed with
-          nextjs and django
+          <span className="text-purple-400 lg:text-xs">●</span> Build the layout
+          and concept for jaxtone.vn using Next.js and TypeScript. chỗ này đang
+          sai ngữ pháp và thiếu câu cú cho chuẩn cần chỉnh
         </p>
-
+        {/* //TODO: chỗ này sai ngữ pháp và cần sửa lại câu cú nhé */}
         <p>
-          <span className="text-purple-400 lg:text-xs">●</span> Making this
-          wedsite with reactjs and react router
+          <span className="text-purple-400 lg:text-xs">●</span> Build the layout
+          and concept for jaxtone.vn using Next.js and TypeScript.
         </p>
       </motion.div>
 
@@ -94,5 +95,3 @@ const ProductAndProject = ({
 };
 
 export default ProductAndProject;
-//TODO: làm thêm nút bấm xem thêm theo dòng thời gian
-//TODO: làm thêm phần project làm lại animation cái này nha
