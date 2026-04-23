@@ -28,7 +28,7 @@ const ContactHome = () => {
   return (
     <div ref={container} className="w-full h-screen overflow-hidden relative">
       <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
-        <div className="flex items-center w-full justify-between">
+        <div className="flex items-center w-1/2 md:1/3 justify-between">
           <Link
             href="https://www.facebook.com/share/19zGeq2UDB/"
             target="_blank"
@@ -44,24 +44,24 @@ const ContactHome = () => {
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#" target="_blank">
-            <LinkedinLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
+          {/* <Link href="#" target="_blank"> */}
+          {/*   <LinkedinLogoIcon */}
+          {/*     size={32} */}
+          {/*     className="hover:text-purple-400 cursor-pointer" */}
+          {/*   /> */}
+          {/* </Link> */}
           <Link href="#" target="_blank">
             <GithubLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="" target="_blank">
-            <ThreadsLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
+          {/* <Link href="" target="_blank"> */}
+          {/*   <ThreadsLogoIcon */}
+          {/*     size={32} */}
+          {/*     className="hover:text-purple-400 cursor-pointer" */}
+          {/*   /> */}
+          {/* </Link> */}
         </div>
         <h2 className="font-bold text-2xl lg:text-4xl tracking-widest">
           <span className="text-purple-400">C</span>ontact Me
@@ -122,3 +122,5 @@ const ContactHome = () => {
 };
 
 export default ContactHome;
+
+//TODO: làm lại cái này nha không ổn lắm nha

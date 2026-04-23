@@ -5,9 +5,14 @@ import { useRef } from "react";
 interface SecondBannerType {
   imageBanner2: string;
   title: string;
+  description: string;
 }
 
-const SecondBanner = ({ imageBanner2, title }: SecondBannerType) => {
+const SecondBanner = ({
+  imageBanner2,
+  title,
+  description,
+}: SecondBannerType) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -32,10 +37,9 @@ const SecondBanner = ({ imageBanner2, title }: SecondBannerType) => {
             <span className="text-purple-400">.</span>
           </h2>
           <div className="lg:w-96 w-70 h-0.5 bg-purple-400 " />
-          {/* <p className='text-sm tracking-wide'> */}
-          {/*   Talk about your team and what services you provide. Tell your visitors the story of how you came up with the */}
-          {/*   idea for your business and what makes you different from your competitors. */}
-          {/* </p> */}
+          <p className="text-[16px] font-semibold tracking-wide leading-7">
+            {description}
+          </p>
         </div>
       </div>
     </div>

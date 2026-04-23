@@ -33,7 +33,7 @@ const Footer = () => {
           <p className="tracking-widest font-medium">congdondev@gmail.com</p>
         </div>
         <p className="font-semibold text-lg tracking-widest">Follow Along</p>
-        <div className="flex items-center w-full justify-between">
+        <div className="flex items-center w-1/2 md:w-1/3 justify-between">
           <Link
             href="https://www.facebook.com/share/19zGeq2UDB/"
             target="_blank"
@@ -49,24 +49,24 @@ const Footer = () => {
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#" target="_blank">
-            <LinkedinLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
+          {/* <Link href="#" target="_blank"> */}
+          {/*   <LinkedinLogoIcon */}
+          {/*     size={32} */}
+          {/*     className="hover:text-purple-400 cursor-pointer" */}
+          {/*   /> */}
+          {/* </Link> */}
           <Link href="#" target="_blank">
             <GithubLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="" target="_blank">
-            <ThreadsLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
+          {/* <Link href="" target="_blank"> */}
+          {/*   <ThreadsLogoIcon */}
+          {/*     size={32} */}
+          {/*     className="hover:text-purple-400 cursor-pointer" */}
+          {/*   /> */}
+          {/* </Link> */}
         </div>
         <p className="font-normal text-xs">© 2026 Don Dinh v1.2.1</p>
       </div>

@@ -44,7 +44,7 @@ const ProductAndProject = ({
       <div className="text-center mt-4 lg:mt-10">
         <Link
           href="/product-list"
-          className="cursor-pointer text-sm select-none hover:bg-zinc-500 px-4 py-2 rounded-sm bg-zinc-700"
+          className="cursor-pointer text-sm select-none hover:bg-zinc-500 px-4 py-2 rounded-sm border border-purple-400 bg-zinc-700"
         >
           See More
         </Link>
@@ -60,14 +60,22 @@ const ProductAndProject = ({
         whileInView={{ opacity: 1, x: 0 }}
       >
         <p>
-          <span className="text-purple-400 lg:text-xs">●</span> Build the layout
-          and concept for jaxtone.vn using Next.js and TypeScript. chỗ này đang
-          sai ngữ pháp và thiếu câu cú cho chuẩn cần chỉnh
+          <span className="text-purple-400 lg:text-xs">●</span> Developing the
+          layout and concept for
+          <Link
+            href="https://jaxtone.vn/"
+            target="_blank"
+            className="text-purple-400 cursor-pointer underline"
+          >
+            {" "}
+            jaxtone.vn
+          </Link>{" "}
+          with Next.js and TypeScript.
         </p>
         {/* //TODO: chỗ này sai ngữ pháp và cần sửa lại câu cú nhé */}
         <p>
-          <span className="text-purple-400 lg:text-xs">●</span> Build the layout
-          and concept for jaxtone.vn using Next.js and TypeScript.
+          <span className="text-purple-400 lg:text-xs">●</span> I designed and
+          developed this website using Next.js and TypeScript.
         </p>
       </motion.div>
 
