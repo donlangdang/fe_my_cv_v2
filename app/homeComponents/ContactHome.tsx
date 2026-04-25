@@ -9,10 +9,8 @@ import {
   FacebookLogoIcon,
   GithubLogoIcon,
   InstagramLogoIcon,
-  LinkedinLogoIcon,
   MapPinIcon,
   PhoneIcon,
-  ThreadsLogoIcon,
 } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -28,21 +26,40 @@ const ContactHome = () => {
   return (
     <div ref={container} className="w-full h-screen overflow-hidden relative">
       <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
-        <div className="flex items-center w-1/2 md:1/3 justify-between">
+        <div className="flex items-center w-full md:1/3 justify-between">
           <Link
             href="https://www.facebook.com/share/19zGeq2UDB/"
             target="_blank"
+            className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
           >
             <FacebookLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
+            Đôn Đinh
           </Link>
-          <Link href="#" target="_blank">
+          <Link
+            href="#"
+            className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
+            target="_blank"
+          >
             <InstagramLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
+            @bodon0211
+          </Link>
+
+          <Link
+            className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
+            href="#"
+            target="_blank"
+          >
+            <InstagramLogoIcon
+              size={32}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+            @bun_leather
           </Link>
           {/* <Link href="#" target="_blank"> */}
           {/*   <LinkedinLogoIcon */}
@@ -50,11 +67,16 @@ const ContactHome = () => {
           {/*     className="hover:text-purple-400 cursor-pointer" */}
           {/*   /> */}
           {/* </Link> */}
-          <Link href="#" target="_blank">
+          <Link
+            className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
+            href="#"
+            target="_blank"
+          >
             <GithubLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
+            donlangdang
           </Link>
           {/* <Link href="" target="_blank"> */}
           {/*   <ThreadsLogoIcon */}

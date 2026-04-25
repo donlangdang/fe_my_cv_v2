@@ -32,7 +32,7 @@ const MyStory = () => {
           alt="Avatar"
           fill
           className="object-center object-cover"
-          src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170660/bannerHome_akpisd.jpg"
+          src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1777129245/PXL_20260408_094221616.RAW-02.ORIGINAL_v0vzvc.jpg"
         />
       </div>
     </div>
