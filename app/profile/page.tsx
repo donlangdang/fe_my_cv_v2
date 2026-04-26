@@ -9,8 +9,8 @@ const page = () => {
   return (
     <div className="h-auto w-full">
       <BannerProfile />
-      <HybirdSkill imageBanner2={Homeapi[2].src} title="Hybird Skill" />
       <TheJourney imageBanner2={Homeapi[2].src} title="The Journey" />
+      <HybirdSkill imageBanner2={Homeapi[2].src} title="Hybird Skill" />
       <TechnicalToolkit
         imageBanner2={Homeapi[2].src}
         title="Technical Toolkit"

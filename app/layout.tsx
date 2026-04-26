@@ -1,19 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Instrument_Serif, Literata } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import ProgressBar from "@/components/progressBar/ProgressBar";
 import SmoothScrolling from "@/components/smoothScrolling/SmoothScrolling";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const instrument = Instrument_Serif({
+  weight: "400",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const literata = Literata({
   subsets: ["latin"],
+  display: "swap",
 });
 
 const baseUrl = process.env.NEXT_PUBLIC_APP_URL;
@@ -74,7 +75,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${instrument.className} ${literata.className} antialiased`}
       >
         <SmoothScrolling>
           <Header />
