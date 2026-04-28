@@ -25,7 +25,7 @@ export default async function Home() {
         description="Crafted with soul. Every stitch is meticulously hand-sewn using traditional techniques, ensuring a level of detail that machines simply cannot replicate."
       />
       <SecondBanner
-        imageBanner2="https://res.cloudinary.com/dhadoo9ui/image/upload/v1776442156/PXL_20251125_062001550.RAW-02.ORIGINAL_jy2pcy.jpg"
+        imageBanner2={Homeapi[4].src}
         title="Finest Quality And Durability"
         description="Built to last a lifetime. Using only the world's premium leather, our products develop a beautiful patina over time, becoming better with age."
       />

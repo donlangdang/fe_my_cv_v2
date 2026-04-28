@@ -4,17 +4,8 @@ import { useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import {
-  EnvelopeIcon,
-  FacebookLogoIcon,
-  GithubLogoIcon,
-  InstagramLogoIcon,
-  LinkedinLogoIcon,
-  MapPinIcon,
-  PhoneIcon,
-  ThreadsLogoIcon,
-} from "@phosphor-icons/react";
-import Link from "next/link";
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@phosphor-icons/react";
+import LinkSocialMedia from "@/components/linkSocialMedia/LinkSocialMedia";
 
 const ContactMe = () => {
   const container = useRef(null);
@@ -28,41 +19,7 @@ const ContactMe = () => {
   return (
     <div ref={container} className="w-full h-screen overflow-hidden relative">
       <div className="w-full lg:w-1/2 px-6 flex flex-col items-center justify-center gap-10 lg:gap-14 z-1 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-shadow-lg">
-        <div className="flex items-center w-full justify-between">
-          <Link
-            href="https://www.facebook.com/share/19zGeq2UDB/"
-            target="_blank"
-          >
-            <FacebookLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
-          <Link href="#" target="_blank">
-            <InstagramLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
-          <Link href="#" target="_blank">
-            <LinkedinLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
-          <Link href="#" target="_blank">
-            <GithubLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
-          <Link href="" target="_blank">
-            <ThreadsLogoIcon
-              size={32}
-              className="hover:text-purple-400 cursor-pointer"
-            />
-          </Link>
-        </div>
+        <LinkSocialMedia />
         <h2 className="font-bold text-2xl lg:text-4xl tracking-widest">
           <span className="text-purple-400">C</span>ontact Me
           <span className="text-purple-400">.</span>

@@ -16,7 +16,7 @@ const Homeapi = [
     alt: "SecondSiteBanner",
   },
   {
-    src: "https://res.cloudinary.com/dhadoo9ui/image/upload/v1764168332/PXL_20250930_034312004_vkpgkf.jpg",
+    src: "https://res.cloudinary.com/dhadoo9ui/image/upload/v1776442156/PXL_20251125_062001550.RAW-02.ORIGINAL_jy2pcy.jpg",
     alt: "ThirdSiteBanner",
   },
 ];
