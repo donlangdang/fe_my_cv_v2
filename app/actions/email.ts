@@ -32,9 +32,9 @@ export async function sendEmail(
 
   // 3. Gửi Email qua Resend
   try {
-    const { data, error } = await resend.emails.send({
-      from: "Don Dinh Portfolio <onboarding@resend.dev>", // Khi verify domain xong thì đổi thành contact@jaxtone.vn
-      to: "donlangdangcc@gmail.com", // Email nhận thông báo của bạn
+    const mailToMe = await resend.emails.send({
+      from: "Don Dinh Portfolio <noreply@contact.dondinhleather.com>", // Khi verify domain xong thì đổi thành contact@jaxtone.vn
+      to: "congdondev@gmail.com", // Email nhận thông báo của bạn
       subject: `Yêu cầu Bespoke từ ${firstName} ${lastName}`,
       replyTo: senderEmail,
       text: `Khách hàng: ${firstName} ${lastName}\nEmail: ${senderEmail}\nNội dung: ${message}`,
@@ -44,23 +44,26 @@ export async function sendEmail(
      * LƯU Ý: Đoạn này sẽ báo lỗi "403" nếu bạn chưa verify domain.
      * Khi nào có domain, hãy bỏ dấu cmt (/*) ở dưới đi.
      */
-    /*
+
     const mailToCustomer = resend.emails.send({
-      from: "Don Dinh <onboarding@resend.dev>", // Sau này đổi thành contact@jaxtone.vn
-      to: senderEmail, 
-      subject: "Xác nhận yêu cầu Bespoke tại Jaxtone Leathercraft",
+      from: "Don Dinh <noreply@contact.dondinhleather.com>", // Sau này đổi thành contact@jaxtone.vn
+      to: senderEmail,
+      subject: "Xác nhận yêu cầu Bespoke tại Don Dinh Leathercraft",
       text: `Chào ${firstName}, mình đã nhận được yêu cầu của bạn và sẽ phản hồi sớm nhất qua email này.`,
     });
-    */
 
-    // Chạy các lệnh gửi mail
-    // const { error } = await mailToMe;
-    // Nếu dùng cả 2 thì dùng: await Promise.all([mailToMe, mailToCustomer]);
+    // Nếu dùng cả 2 thì dùng:
+    const results = await Promise.all([mailToMe, mailToCustomer]);
 
-    if (error) {
+    // Kiểm tra nếu có lỗi ở bất kỳ luồng nào
+    const hasError = results.some((res) => res.error);
+
+    if (hasError) {
       return {
         success: false,
-        errors: { server: [error.message] },
+        errors: {
+          server: ["Có lỗi xảy ra khi gửi email, vui lòng thử lại sau."],
+        },
       };
     }
 

@@ -20,7 +20,7 @@ const LinkSocialMedia = () => {
         Đôn Đinh
       </Link>
       <Link
-        href="#"
+        href="https://www.instagram.com/bodon0211?igsh=anpvMTZwMXV1d3Vm"
         className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
         target="_blank"
       >
@@ -33,7 +33,7 @@ const LinkSocialMedia = () => {
 
       <Link
         className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
-        href="#"
+        href="https://www.instagram.com/bun_leather?igsh=a3pybzg2eWRoZmJt"
         target="_blank"
       >
         <InstagramLogoIcon
@@ -44,7 +44,7 @@ const LinkSocialMedia = () => {
       </Link>
       <Link
         className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
-        href="#"
+        href="https://github.com/donlangdang"
         target="_blank"
       >
         <GithubLogoIcon
