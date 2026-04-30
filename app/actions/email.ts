@@ -1,7 +1,7 @@
 "use server";
-
 import { Resend } from "resend";
 import { ContactSchema, ActionResponse } from "@/lib/schema";
+import { Email } from "@/components/sendEmail/SendEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -35,9 +35,9 @@ export async function sendEmail(
     const mailToMe = await resend.emails.send({
       from: "Don Dinh Portfolio <noreply@contact.dondinhleather.com>", // Khi verify domain xong thì đổi thành contact@jaxtone.vn
       to: "congdondev@gmail.com", // Email nhận thông báo của bạn
-      subject: `Yêu cầu Bespoke từ ${firstName} ${lastName}`,
+      subject: `Request Bespoke from ${firstName} ${lastName}`,
       replyTo: senderEmail,
-      text: `Khách hàng: ${firstName} ${lastName}\nEmail: ${senderEmail}\nNội dung: ${message}`,
+      text: `client: ${firstName} ${lastName}\nEmail: ${senderEmail}\nContent: ${message}`,
     });
 
     /** * LỆNH 2: Gửi email xác nhận cho KHÁCH HÀNG
@@ -46,10 +46,11 @@ export async function sendEmail(
      */
 
     const mailToCustomer = resend.emails.send({
-      from: "Don Dinh <noreply@contact.dondinhleather.com>", // Sau này đổi thành contact@jaxtone.vn
+      from: "Don Dinh <noreply@contact.dondinhleather.com>",
       to: senderEmail,
-      subject: "Xác nhận yêu cầu Bespoke tại Don Dinh Leathercraft",
-      text: `Chào ${firstName}, mình đã nhận được yêu cầu của bạn và sẽ phản hồi sớm nhất qua email này.`,
+      subject: "Confirm your Bespoke order at Don Dinh Leathercraft",
+      text: `Hi ${firstName}, I have received your request and will respond as soon as possible via this email.`,
+      react: Email({ firstName, lastName }),
     });
 
     // Nếu dùng cả 2 thì dùng:
@@ -62,7 +63,9 @@ export async function sendEmail(
       return {
         success: false,
         errors: {
-          server: ["Có lỗi xảy ra khi gửi email, vui lòng thử lại sau."],
+          server: [
+            "An error occurred while sending the email; please try again later.",
+          ],
         },
       };
     }

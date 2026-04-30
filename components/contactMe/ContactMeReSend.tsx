@@ -92,7 +92,7 @@ const ContactMeReSend = () => {
       </Button>
       {state.success && (
         <div className="text-green-400 text-sm font-medium bg-green-400/10 p-3 border border-green-400/20 w-full text-center animate-in fade-in zoom-in duration-300">
-          Gửi thành công! Don sẽ liên hệ lại với bạn sớm nhất.
+          Email sent successfully! Don will contact you as soon as possible.
         </div>
       )}
       <div className="w-full h-auto flex flex-col gap-6">
