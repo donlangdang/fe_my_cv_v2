@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧵 Don Dinh Leather | Bespoke Artisan Portfolio
 
-## Getting Started
+![](https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170660/bannerHome_akpisd.jpg)
 
-First, run the development server:
+This is a personal space where I showcase my handmade leather products and my journey of learning web development. It’s a simple portfolio designed to connect with fellow craft enthusiasts and clients interested in bespoke leather goods.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🖋️ About Me
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+I am Don Dinh, a leather artisan with about 7 years of experience. This website was built from scratch to serve as a gallery for my hand-stitched creations and as a practical project to apply what I have been teaching myself about web programming since late 2023.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js (App Router)
 
-## Learn More
+- Tailwind CSS
 
-To learn more about Next.js, take a look at the following resources:
+- Resend & React Email
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Cloudinary
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Cloudflare
 
-## Deploy on Vercel
+## ✨ Highlights
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Simple Inquiry Flow:** An automated email response system that ensures every message is acknowledged professionally.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Lightweight Design:** Optimized for a clean and straightforward browsing experience.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+**_Thank you for stopping by my small corner of the web._**
