@@ -44,7 +44,7 @@ const LinkSocialMedia = () => {
       </Link>
       <Link
         className="flex items-center justify-center flex-col text-xs md:text-base hover:text-purple-400"
-        href="https://github.com/donlangdang"
+        href="https://github.com/donlangdang/fe_my_cv_v2"
         target="_blank"
       >
         <GithubLogoIcon
