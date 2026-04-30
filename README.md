@@ -1,6 +1,6 @@
 # 🧵 Don Dinh Leather | Bespoke Artisan Portfolio
 
-![](https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170660/bannerHome_akpisd.jpg)
+<img src="https://res.cloudinary.com/dhadoo9ui/image/upload/f_auto,q_auto/v1764170660/bannerHome_akpisd.jpg" width="100%" alt="Don Dinh Leather Banner" />
 
 This is a personal space where I showcase my handmade leather products and my journey of learning web development. It’s a simple portfolio designed to connect with fellow craft enthusiasts and clients interested in bespoke leather goods.
 
