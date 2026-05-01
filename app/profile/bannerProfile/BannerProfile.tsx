@@ -9,10 +9,10 @@ const BannerProfile = () => {
           alt="avatar"
           width={1200}
           height={1600}
-          sizes="25vw"
+          sizes="50%vw"
           loading="lazy"
           className="object-center object-cover rounded-2xl md:w-2/5"
-          src="PXL_20260408_094221616.RAW-02.ORIGINAL_v0vzvc"
+          src="PXL_20260427_022511156.RAW-02.ORIGINAL_kapcob"
         />
         <div className="w-full h-full flex items-start justify-center flex-col md:w-3/5 md:pt-20 gap-4">
           <h2 className="border-b pb-2 text-3xl font-semibold tracking-wide first:mt-0">
