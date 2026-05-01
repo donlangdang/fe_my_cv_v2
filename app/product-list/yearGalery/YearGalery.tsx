@@ -34,7 +34,10 @@ const YearGalery = ({ images }: { images: CloudinarySearchResponse }) => {
                 src={image.public_id}
               />
             </DialogTrigger>
-            <DialogContent className="flex items-center justify-center sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]">
+            <DialogContent
+              aria-describedby=""
+              className="flex items-center justify-center sm:max-w-8xl w-full h-full max-h-[calc(100%-2rem)]"
+            >
               <DialogTitle className="hidden"></DialogTitle>
               <Image
                 alt={image.public_id}

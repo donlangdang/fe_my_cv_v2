@@ -1,6 +1,6 @@
 "use client";
-import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
 import {
   FacebookLogoIcon,
   GithubLogoIcon,
@@ -8,11 +8,14 @@ import {
 } from "@phosphor-icons/react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 
 interface SecondBannerType {
   imageBanner2: string;
   title: string;
 }
+
+const MotionCldImage = motion.create(CldImage);
 
 const CallToAction = ({ imageBanner2, title }: SecondBannerType) => {
   const container = useRef(null);
@@ -25,9 +28,13 @@ const CallToAction = ({ imageBanner2, title }: SecondBannerType) => {
 
   return (
     <div ref={container} className="relative w-full h-screen overflow-hidden">
-      <div className="w-full h-full">
-        <motion.img
+      <div className="relative w-full h-full">
+        <MotionCldImage
+          alt="Call to action"
           style={{ y: positionY }}
+          fill
+          sizes="100vw"
+          loading="lazy"
           className="w-full h-full object-cover object-center"
           src={imageBanner2}
         />

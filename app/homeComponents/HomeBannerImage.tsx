@@ -1,6 +1,9 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { CldImage } from "next-cloudinary";
+
+const MotionCldImage = motion.create(CldImage);
 
 const HomeBannerImage = () => {
   const container = useRef(null);
@@ -30,10 +33,14 @@ const HomeBannerImage = () => {
           Fine Leatherwork and Wed Developer
         </p>
       </div>
-      <motion.img
+      <MotionCldImage
         style={{ y, scale: sc }}
+        alt="banner"
+        fill
+        sizes="100vw"
         className=" w-full h-full lg:aspect-video object-cover object-center"
-        src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170660/bannerHome_akpisd.jpg"
+        src="bannerHome_akpisd"
+        loading="eager"
       />
     </div>
   );

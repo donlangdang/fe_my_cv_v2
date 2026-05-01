@@ -1,11 +1,14 @@
 "use client";
-import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { useScroll, motion, useTransform } from "framer-motion";
+import { CldImage } from "next-cloudinary";
 
 interface SecondBannerType {
   imageBanner2: string;
   title: string;
 }
+
+const MotionCldImage = motion.create(CldImage);
 
 const TheJourney = ({ imageBanner2, title }: SecondBannerType) => {
   const container = useRef(null);
@@ -18,9 +21,13 @@ const TheJourney = ({ imageBanner2, title }: SecondBannerType) => {
 
   return (
     <div ref={container} className="relative w-full h-screen overflow-hidden">
-      <div className="w-full h-full">
-        <motion.img
+      <div className="relative w-full h-full">
+        <MotionCldImage
+          alt="The Journey"
           style={{ y: positionY }}
+          fill
+          sizes="100vw"
+          loading="lazy"
           className="w-full h-full object-cover object-center"
           src={imageBanner2}
         />

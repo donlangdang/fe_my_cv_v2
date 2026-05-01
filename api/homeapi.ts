@@ -8,15 +8,15 @@ const Homeapi = [
     alt: "Avatar",
   },
   {
-    src: "https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170708/bannerHome2.1_bohd9l.jpg",
+    src: "copy_of_bannerhome21_bohd9l_43d041",
     alt: "firstSiteBanner",
   },
   {
-    src: "https://res.cloudinary.com/dhadoo9ui/image/upload/v1764168313/PXL_20251118_032301765.RAW-02.ORIGINAL_ricgnn.jpg",
+    src: "PXL_20251118_032301765.RAW-02.ORIGINAL_ricgnn",
     alt: "SecondSiteBanner",
   },
   {
-    src: "https://res.cloudinary.com/dhadoo9ui/image/upload/v1776442156/PXL_20251125_062001550.RAW-02.ORIGINAL_jy2pcy.jpg",
+    src: "PXL_20251125_062001550.RAW-02.ORIGINAL_jy2pcy",
     alt: "ThirdSiteBanner",
   },
 ];

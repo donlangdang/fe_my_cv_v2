@@ -1,4 +1,5 @@
-import Image from "next/image";
+"use client";
+import { CldImage } from "next-cloudinary";
 
 const MyStory = () => {
   return (
@@ -28,11 +29,13 @@ const MyStory = () => {
         </p>
       </div>
       <div className="relative rounded-2xl border-2 border-purple-400 overflow-hidden bg-muted w-full h-auto flex-1 aspect-3/4 lg:aspect-square">
-        <Image
+        <CldImage
           alt="Avatar"
           fill
+          sizes="50vw"
           className="object-center object-cover"
           src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1777129245/PXL_20260408_094221616.RAW-02.ORIGINAL_v0vzvc.jpg"
+          loading="lazy"
         />
       </div>
     </div>

@@ -18,7 +18,7 @@ interface EmailProps {
 
 export const Email = ({ firstName, lastName }: EmailProps) => (
   <Tailwind>
-    <Html>
+    <Html lang="en">
       <Head>
         <SkinFonts />
       </Head>

@@ -1,14 +1,15 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 import {
   FacebookLogoIcon,
   GithubLogoIcon,
   InstagramLogoIcon,
-  LinkedinLogoIcon,
-  ThreadsLogoIcon,
 } from "@phosphor-icons/react";
-import Link from "next/link";
+
+const MotionCldImage = motion.create(CldImage);
 
 const Footer = () => {
   const container = useRef(null);
@@ -43,37 +44,43 @@ const Footer = () => {
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          <Link href="#" target="_blank">
+          <Link
+            href="https://www.instagram.com/bodon0211?igsh=anpvMTZwMXV1d3Vm"
+            target="_blank"
+          >
             <InstagramLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          {/* <Link href="#" target="_blank"> */}
-          {/*   <LinkedinLogoIcon */}
-          {/*     size={32} */}
-          {/*     className="hover:text-purple-400 cursor-pointer" */}
-          {/*   /> */}
-          {/* </Link> */}
-          <Link href="#" target="_blank">
+          <Link
+            href="https://www.instagram.com/bun_leather?igsh=a3pybzg2eWRoZmJt"
+            target="_blank"
+          >
+            <InstagramLogoIcon
+              size={32}
+              className="hover:text-purple-400 cursor-pointer"
+            />
+          </Link>
+          <Link
+            href="https://github.com/donlangdang/fe_my_cv_v2"
+            target="_blank"
+          >
             <GithubLogoIcon
               size={32}
               className="hover:text-purple-400 cursor-pointer"
             />
           </Link>
-          {/* <Link href="" target="_blank"> */}
-          {/*   <ThreadsLogoIcon */}
-          {/*     size={32} */}
-          {/*     className="hover:text-purple-400 cursor-pointer" */}
-          {/*   /> */}
-          {/* </Link> */}
         </div>
         <p className="font-normal text-xs">© 2026 Don Dinh v1.2.1</p>
       </div>
-      <motion.img
+      <MotionCldImage
         style={{ y }}
+        fill
+        sizes="100vw"
+        alt="Footer"
         className="w-full h-full lg:aspect-video object-cover object-center"
-        src="https://res.cloudinary.com/dhadoo9ui/image/upload/v1764170598/.trashed-1766503912-PXL_20251105_075313394.RAW-02.ORIGINAL_pyt5cw.jpg"
+        src=".trashed-1766503912-PXL_20251105_075313394.RAW-02.ORIGINAL_pyt5cw"
       />
     </div>
   );

@@ -9,8 +9,8 @@ const BannerProfile = () => {
           alt="avatar"
           width={1200}
           height={1600}
-          sizes="50%vw"
-          loading="lazy"
+          sizes="100vw"
+          loading="eager"
           className="object-center object-cover rounded-2xl md:w-2/5"
           src="PXL_20260427_022511156.RAW-02.ORIGINAL_kapcob"
         />
